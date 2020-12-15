@@ -1,3 +1,38 @@
+//// another Promise
+
+
+//// another Callback
+// create a callback function that will greet you. Create introduction 
+//function that takes three arguments: your name, surename and callback
+
+//main function that will take callback as an argument
+
+function sayLoud(name, surename, callback) {
+    let wholename = `${name} ${surename}`;
+
+    callback(wholename);
+}
+
+// different callback functions that can be chosen based on some condition 
+//- now they aren't inside any condition
+
+function greet(wholename) {
+    console.log(`Hello ${wholename}, nice to meet you!`);
+}
+
+function bye(wholename) {
+    console.log(`Hello ${wholename}, bye bye, see you next time!`);
+}
+
+function goodNight(wholename){
+    console.log(`Hello ${wholename}, good night!`);
+}
+
+sayLoud('[name]', '[surename]', greet);
+sayLoud('[name]', '[surename]', bye);
+sayLoud('[name]', '[surename]', goodNight);
+
+
 //// Callback and promises - check if user has access + send message
 //ES5
 let access = true;
@@ -32,7 +67,8 @@ test21()
     .then((message) => console.log('Success! ' + message))
     .catch((message) => console.log('Failed! ' + message))
 
-/* console.log('---(.)(.)---');
+/*
+console.log('---(.)(.)---');
 
 //// Classes
 class Person{
