@@ -1,4 +1,3 @@
-//// another Promise
 
 
 //// another Callback
@@ -55,7 +54,7 @@ test();
 
 //ES6
 function test21 () {
-    return new Promise ((resolve, reject) => {
+    return new Promise ((resolve, reject) =>{
         if (access) {
             resolve('Enjoy the work 21');
         } else {
